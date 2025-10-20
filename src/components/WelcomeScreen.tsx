@@ -9,9 +9,18 @@ interface WelcomeScreenProps {
 export const WelcomeScreen = ({ onEnter }: WelcomeScreenProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, scale: 1 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ 
+        opacity: 0,
+        scale: 1.5,
+        rotateZ: 10,
+        filter: "blur(20px)",
+      }}
+      transition={{
+        duration: 1,
+        ease: [0.43, 0.13, 0.23, 0.96]
+      }}
       className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-elegant"
     >
       {/* Animated Giraffes */}
