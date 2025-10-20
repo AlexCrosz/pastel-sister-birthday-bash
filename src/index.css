@@ -8,40 +8,33 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 330 60% 97%;
-    --foreground: 330 40% 20%;
-
+    --background: 35 100% 99%;
+    --foreground: 330 50% 25%;
     --card: 0 0% 100%;
-    --card-foreground: 330 40% 20%;
-
+    --card-foreground: 330 50% 25%;
     --popover: 0 0% 100%;
-    --popover-foreground: 330 40% 20%;
-
-    --primary: 330 70% 65%;
+    --popover-foreground: 330 50% 25%;
+    --primary: 340 75% 68%;
     --primary-foreground: 0 0% 100%;
+    --secondary: 280 65% 78%;
+    --secondary-foreground: 270 50% 20%;
+    --muted: 330 35% 96%;
+    --muted-foreground: 330 25% 45%;
+    --accent: 160 55% 72%;
+    --accent-foreground: 150 50% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 330 25% 92%;
+    --input: 330 25% 92%;
+    --ring: 340 75% 68%;
+    --radius: 1.25rem;
 
-    --secondary: 270 60% 75%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 150 50% 90%;
-    --muted-foreground: 330 30% 40%;
-
-    --accent: 150 60% 70%;
-    --accent-foreground: 330 40% 20%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 330 40% 90%;
-    --input: 330 40% 90%;
-    --ring: 330 70% 65%;
-
-    --radius: 1rem;
-
-    --gradient-pastel: linear-gradient(135deg, hsl(330 70% 85%), hsl(270 60% 85%), hsl(150 60% 85%));
-    --gradient-hero: linear-gradient(180deg, hsl(330 70% 95%), hsl(270 60% 95%));
-    --shadow-soft: 0 10px 40px -10px hsl(330 70% 65% / 0.2);
-    --shadow-card: 0 4px 20px -4px hsl(330 50% 70% / 0.15);
+    --gradient-pastel: linear-gradient(135deg, hsl(330 80% 96%), hsl(280 70% 96%), hsl(160 65% 96%));
+    --gradient-hero: linear-gradient(135deg, hsl(340 75% 88%) 0%, hsl(280 65% 88%) 50%, hsl(330 70% 90%) 100%);
+    --gradient-elegant: linear-gradient(120deg, hsl(340 75% 95%), hsl(280 65% 95%));
+    --shadow-soft: 0 12px 45px -12px hsl(340 75% 68% / 0.35);
+    --shadow-card: 0 10px 35px -10px hsl(340 75% 68% / 0.25);
+    --shadow-elegant: 0 20px 60px -15px hsl(340 75% 68% / 0.3);
     
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;

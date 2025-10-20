@@ -65,10 +65,12 @@ export default {
       backgroundImage: {
         'gradient-pastel': 'var(--gradient-pastel)',
         'gradient-hero': 'var(--gradient-hero)',
+        'gradient-elegant': 'var(--gradient-elegant)',
       },
       boxShadow: {
         'soft': 'var(--shadow-soft)',
         'card': 'var(--shadow-card)',
+        'elegant': 'var(--shadow-elegant)',
       },
       borderRadius: {
         lg: "var(--radius)",

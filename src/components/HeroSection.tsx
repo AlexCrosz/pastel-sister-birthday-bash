@@ -51,13 +51,13 @@ export const HeroSection = () => {
         ))}
       </div>
 
-      {/* Floating balloons */}
-      {[...Array(5)].map((_, i) => (
+      {/* Floating balloons and giraffes */}
+      {[...Array(3)].map((_, i) => (
         <motion.div
-          key={i}
+          key={`balloon-${i}`}
           className="absolute text-6xl"
           style={{
-            left: `${20 + i * 15}%`,
+            left: `${25 + i * 25}%`,
             bottom: '-10%',
           }}
           animate={{
@@ -74,11 +74,43 @@ export const HeroSection = () => {
           🎈
         </motion.div>
       ))}
+      
+      {/* Cute giraffes */}
+      {[...Array(2)].map((_, i) => (
+        <motion.div
+          key={`giraffe-${i}`}
+          className="absolute text-7xl"
+          style={{
+            left: i === 0 ? '10%' : '85%',
+            bottom: '5%',
+          }}
+          animate={{
+            rotate: [0, 5, 0, -5, 0],
+            y: [0, -15, 0],
+          }}
+          transition={{
+            duration: 4 + i,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        >
+          🦒
+        </motion.div>
+      ))}
 
       {/* Content */}
       <div className="relative z-10 text-center px-4">
+        <motion.div
+          className="mb-6"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="text-8xl">🦒</span>
+        </motion.div>
+        
         <motion.h1
-          className="font-decorative text-7xl md:text-9xl text-primary mb-6"
+          className="font-decorative text-7xl md:text-9xl text-primary mb-6 drop-shadow-lg"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -86,7 +118,7 @@ export const HeroSection = () => {
           Happy Birthday, Kak!
         </motion.h1>
         <motion.p
-          className="text-2xl md:text-3xl text-foreground font-light"
+          className="text-2xl md:text-3xl text-foreground font-light max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -101,8 +133,8 @@ export const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <motion.button
-            className="bg-primary text-primary-foreground px-8 py-4 rounded-full text-lg font-semibold shadow-soft hover:shadow-lg transition-all"
-            whileHover={{ scale: 1.05 }}
+            className="bg-primary text-primary-foreground px-10 py-5 rounded-full text-lg font-semibold shadow-elegant hover:shadow-soft transition-all backdrop-blur-sm"
+            whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => {
               document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
