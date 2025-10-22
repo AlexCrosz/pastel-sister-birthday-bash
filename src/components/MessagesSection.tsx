@@ -4,7 +4,7 @@ const messages = [
     {
         id: 1,
         from: 'Papah & Mamah',
-        message: 'Tuk putri kami, Via tetaplah jadi putri kami yang manis tapi kuat, lembut tapi tegar. Raih harapan bersama Kristus, nantikan janjiNya yang terbaik. HBD 🙏',
+        message: 'Tuk putri kami, Via... tetaplah jadi putri kami yang manis tapi kuat, lembut tapi tegar. Raih harapan bersama Kristus, nantikan janjiNya yang terbaik. Jangan lupa doa kami selalu untuk setiap langkahmu...  HBD',
         emoji: '👨‍👩‍👧‍👦',
     },
     {
