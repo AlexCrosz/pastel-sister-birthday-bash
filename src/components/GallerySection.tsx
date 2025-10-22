@@ -15,6 +15,7 @@ import memory11 from '../assets/Kuliah3.jpg';
 import memory12 from '../assets/Kuliah4.png';
 import memory13 from '../assets/Kecil5.jpg';
 
+<<<<<<< HEAD
 // --- STRUKTUR DATA BERDASARKAN KATEGORI ---
 const photoSections = [
     {
@@ -69,12 +70,34 @@ export const GallerySection = () => {
         setDirection(1);
         setCurrentPhotoIndex((prev) => (prev + 1) % activePhotos.length);
     };
+=======
+const photos = [
+  { id: 1, src: memory1, caption: '👶 Kelahiran - Awal Perjalanan' },
+  { id: 2, src: memory2, caption: '🎓 Masa Remaja - Berkembang' },
+  { id: 3, src: memory3, caption: '🌟 Dewasa - Bersinar' },
+];
+
+export const GallerySection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+
+  const nextPhoto = () => {
+    setDirection(1);
+    setCurrentIndex((prev) => (prev + 1) % photos.length);
+  };
+
+  const prevPhoto = () => {
+    setDirection(-1);
+    setCurrentIndex((prev) => (prev - 1 + photos.length) % photos.length);
+  };
+>>>>>>> 70c7a53e3efcdcd9a2a4819694fa865d5947a0ef
 
     const prevPhoto = () => {
         setDirection(-1);
         setCurrentPhotoIndex((prev) => (prev - 1 + activePhotos.length) % activePhotos.length);
     };
 
+<<<<<<< HEAD
     return (
         <section id="gallery" className="relative min-h-screen py-20 px-4 bg-gradient-elegant overflow-hidden">
             {/* Giraffe decorations */}
@@ -92,6 +115,59 @@ export const GallerySection = () => {
             >
                 🦒
             </motion.div>
+=======
+        <div className="relative max-w-3xl mx-auto">
+          {/* Main photo display */}
+          <motion.div
+            key={currentIndex}
+            className="relative aspect-square rounded-3xl overflow-hidden shadow-elegant ring-2 ring-primary/10"
+            initial={{ 
+              opacity: 0, 
+              scale: 0.8,
+              x: direction > 0 ? 300 : -300,
+              rotateY: direction > 0 ? 45 : -45,
+              filter: 'blur(10px)'
+            }}
+            animate={{ 
+              opacity: 1, 
+              scale: 1,
+              x: 0,
+              rotateY: 0,
+              filter: 'blur(0px)'
+            }}
+            exit={{ 
+              opacity: 0, 
+              scale: 0.8,
+              x: direction > 0 ? -300 : 300,
+              rotateY: direction > 0 ? -45 : 45,
+              filter: 'blur(10px)'
+            }}
+            transition={{ 
+              duration: 0.8,
+              ease: [0.43, 0.13, 0.23, 0.96]
+            }}
+            style={{ perspective: 1200 }}
+          >
+            <motion.img
+              src={photos[currentIndex].src}
+              alt={photos[currentIndex].caption}
+              className="w-full h-full object-cover"
+              initial={{ scale: 1.2 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.8 }}
+            />
+            <motion.div 
+              className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-8"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            >
+              <p className="text-white text-xl font-light text-center drop-shadow-lg">
+                {photos[currentIndex].caption}
+              </p>
+            </motion.div>
+          </motion.div>
+>>>>>>> 70c7a53e3efcdcd9a2a4819694fa865d5947a0ef
 
             {/* --- FLOATING BALLOONS --- */}
             {[...Array(5)].map((_, i) => (
